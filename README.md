@@ -137,3 +137,7 @@ YAML playbooks for filebeat and metricbeat:
 - ![MetricbeatPlaybook](https://github.com/Valethiel/cyber-security-portfolio/blob/9a1abe5bb173512523745be6fce7576a7827d4bf/Ansible/MetricbeatPlaybook.yml.txt)
 
 Run ansible-playbook filebeat-playbook.yml and the metricbeat-playbook.yml from their respective folders.
+
+**Image of Deployed Server on Microsoft Azure:**
+
+![Azure Groups](https://github.com/Valethiel/cyber-security-portfolio/blob/499001b24df043e8b70ad9299641c4225cba1d16/Images/azure\_groups.jpg)
