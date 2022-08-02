@@ -14,18 +14,24 @@ These files have been tested and used to generate a live ELK deployment on Micro
 - Description of the Topology
 - Access Policies
 - ELK Configuration
-  - Beats in Use
-  - Machines Being Monitored
+- Beats in Use
+- Machines Being Monitored
 - How to Use the Ansible Build
 ### Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D\*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available and protected, in addition to restricting malicious access to the network.
+
 **What does the Load Balancer Protect?**
 
 - Load balancers protect the confidentiality portion of the CIA Triad. They provide us with a public IP address that’s used to mask the backend resources from direct or indirect internet access.
-  **What are the advantages of a jump box?**
-- The advantage of a jump box is that it acts as a single gateway router between multiple VMs on a network. When we are only securing and monitoring this one single gateway, it allows for us to focus on one single and secure connection to the jump box, instead of having to focus on multiple connections between all the multiple virtual machines. The jump box is exposed to the public internet, and and it sits as a defense shield in front of other machines so that not exposed to the public internet. It also controls user access to the virtual machines by allowing only connections from specific IP addresses to flow, and then it forwards them to the back-end resources. To make sure the jump box is secure, we need to:
+
+**What are the advantages of a jump box?**
+
+- The advantage of a jump box is that it acts as a single gateway router between multiple VMs on a network. When we are only securing and monitoring this one single gateway, it allows for us to focus on one single and secure connection to the jump box, instead of having to focus on multiple connections between all the multiple virtual machines. The jump box is exposed to the public internet, and and it sits as a defense shield in front of other machines so that not exposed to the public internet. It also controls user access to the virtual machines by allowing only connections from specific IP addresses to flow, and then it forwards them to the back-end resources.
+
+To make sure the jump box is secure, we need to:
+
 - add two-factor authentication for the SSH login to access the jump box
 - implement a log monitoring system on the jump box
 - lock the root account for access
@@ -71,7 +77,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually.
 
-**Advantage of Automating Configuration with Ansible**
+**Advantage of Automating Configuration with Ansible:**
 
 - The main advantage of automating configuration with Ansible is the ability to install software and change/update configuration files in an unlimited amount of servers within a short period of time.
 
@@ -87,7 +93,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker PS Output](NEED LINK)
+![Docker PS Output](https://github.com/Valethiel/cyber-security-portfolio/blob/2e83e1c85ecf835c29b366e8538c0986a922ae2a/Images/docker\_ss.jpg)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
@@ -129,4 +135,5 @@ YAML playbooks for filebeat and metricbeat:
 
 - ![FilebeatPlaybook](https://github.com/Valethiel/cyber-security-portfolio/blob/9a1abe5bb173512523745be6fce7576a7827d4bf/Ansible/FilebeatPlaybook.yml.txt)
 - ![MetricbeatPlaybook](https://github.com/Valethiel/cyber-security-portfolio/blob/9a1abe5bb173512523745be6fce7576a7827d4bf/Ansible/MetricbeatPlaybook.yml.txt)
-- Run ansible-playbook filebeat-playbook.yml and the metricbeat-playbook.yml from their respective folders.
+
+Run ansible-playbook filebeat-playbook.yml and the metricbeat-playbook.yml from their respective folders.
